@@ -11,19 +11,21 @@
  *   GPL v3 http://opensource.org/licenses/GPL-3.0
  *
  */
+
 (function (root, factory) {
   'use strict';
   // https://github.com/umdjs/umd/blob/master/returnExports.js
-  if (typeof exports === 'object') {
-    // Node
-    module.exports = factory(require('./punycode'), require('./IPv6'), require('./SecondLevelDomains'));
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['./punycode', './IPv6', './SecondLevelDomains'], factory);
-  } else {
-    // Browser globals (root is window)
-    root.URI = factory(root.punycode, root.IPv6, root.SecondLevelDomains, root);
-  }
+  // if (typeof module.exports === 'object') {
+  //   // Node
+  //   module.exports = factory(require('./punycode'), require('./IPv6'), require('./SecondLevelDomains'));
+  // } else if (typeof define === 'function' && define.amd) {
+  //   // AMD. Register as an anonymous module.
+  //   define(['./punycode', './IPv6', './SecondLevelDomains'], factory);
+  // } else {
+  //   // Browser globals (root is window)
+  //   root.URI = factory(root.punycode, root.IPv6, root.SecondLevelDomains, root);
+  // }
+  module.exports = factory()
 }(this, function (punycode, IPv6, SLD, root) {
   'use strict';
   /*global location, escape, unescape */
