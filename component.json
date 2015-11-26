@@ -1,0 +1,7 @@
+{
+    "version": "1.11.3",
+    "repos": "https://github.com/medialize/URI.js",
+    "protocol":"github:hqlcs/URI",
+    "name": "URI",
+    "main": "URI.js"
+}
